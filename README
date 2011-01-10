@@ -1,0 +1,33 @@
+This program depends on:
+    -- python2.6 or higher
+    -- logilab.hmm module
+
+And logilab.hmm module depends on:
+    -- Mercurial (for grabing out files)
+    -- numpy
+    -- gcc
+    -- gfortran (or any other fortarn compiler supported by setup.py)
+
+INSTALL
+
+    To do a typical (userland) installation of logilab.hmm:
+
+        $ apt-get install python python-dev python-numpy gfortran mercurial
+
+        $ hg clone http://hg.logilab.org/logilab/hmm
+
+    Then we'll have the installation script setup.py in hmm.
+
+        $ cd hmm/
+        $ python setup.py install -user
+
+    To test if installation is finished you may do the following steps:
+
+        $ python
+        from logilab.hmm import HMM
+
+    No news is good news.
+
+    I haven't done this on Windows platform. Theorically, you'll need mingw,
+    a supported fortarn compiler and sci-py package. 
+ 
